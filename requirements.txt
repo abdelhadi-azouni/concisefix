@@ -1,0 +1,6 @@
+requests
+openai
+bs4
+stackapi
+flask
+transformers
