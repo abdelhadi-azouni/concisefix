@@ -21,7 +21,6 @@ from concurrent.futures import ThreadPoolExecutor
 # from serpapi import GoogleSearch
 
 
-
 import streamlit_google_oauth as oauth
 
 app = Flask(__name__)
@@ -32,7 +31,7 @@ redirect_uri = os.environ['REDIRECT_URI']
 
 openai.api_key = os.getenv("OPENAI_API_KEY")
 
-SITE = StackAPI('stackoverflow', version='2.3', key='OTCUz0tyfjnXXvYtomHjLg((', access_token='0l0o8e7TPbL2SnmixhPNrA))')
+SITE = StackAPI('stackoverflow', version='2.3', key='STACK_API_KEY', access_token='STACK_TOKEN')
 SITE.max_pages=1
 SITE.page_size=20
 data = list()
@@ -213,19 +212,7 @@ def search_google_serp(question):
 
 
 def compose_search_query(question):
-    # Step1: clean the quesiton 
-    
-    # Step2: based on the question type, self-ask to extract context 
-    # there are 3 categories of quesitons 
-    # 1. I have these error logs, what is the reason and what is the solution?
-    # 2. I have this config or this code, but when run I have  this error logs, what is the reason and what is the solution?
-    # 3. I have done this and this, but when I run this I have this error logs, what is the reason and what is the solution?
-    # Step3: compose a clean, concise and meaningful question 
 
-    # Step1: @TODO
-    # at least remove "> and $ and *"
-
-    # Step2: 
     prompt_issue_class = f"""The logs are: {user_introduced_question} 
     Does the question contain an issue description or does it just contain the error logs?\n\n"    
     """
