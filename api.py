@@ -41,8 +41,8 @@ def text_from_html(body):
 
 def search_google_custom(query):
     params = {
-	    "key": "CUSTOM_SEARCH_ENGINE_KEY", #to get, follow the instructions in link above
-        "cx": "CX_VALUE", #to get, follow the instructions in link above
+	    "key": "CUSTOM_SEARCH_ENGINE_KEY", #to get, follow the instructions in the medium post
+        "cx": "CX_VALUE", #to get, follow the instructions in the medium post
         "q": query,
         "gl": "us",
         "hl": "en"
@@ -55,8 +55,8 @@ def search_google_custom(query):
     if int(search_results.json()["searchInformation"]["totalResults"]) < 3:
         query = compose_search_query(query)
         params = {
-            "key": "CUSTOM_SEARCH_ENGINE_KEY", #to get, follow the instructions in link above
-            "cx": "CX_VALUE", #to get, follow the instructions in link above
+            "key": "CUSTOM_SEARCH_ENGINE_KEY", #to get, follow the instructions in the medium post
+            "cx": "CX_VALUE", #to get, follow the instructions in the medium post
             "q": query,
             "gl": "us",
             "hl": "en"
