@@ -41,8 +41,8 @@ def text_from_html(body):
 
 def search_google_custom(query):
     params = {
-	    "key": "AIzaSyBoe003gU2DVkf0AOSe1hthkksvYqOTfyk", #to get, follow the instructions in link above
-        "cx": "227a7cec4600f4427", #to get, follow the instructions in link above
+	    "key": "CUSTOM_SEARCH_ENGINE_KEY", #to get, follow the instructions in link above
+        "cx": "CX_VALUE", #to get, follow the instructions in link above
         "q": query,
         "gl": "us",
         "hl": "en"
