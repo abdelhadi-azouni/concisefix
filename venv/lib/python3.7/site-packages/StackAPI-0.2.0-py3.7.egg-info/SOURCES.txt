@@ -1,0 +1,10 @@
+README.rst
+setup.cfg
+setup.py
+StackAPI.egg-info/PKG-INFO
+StackAPI.egg-info/SOURCES.txt
+StackAPI.egg-info/dependency_links.txt
+StackAPI.egg-info/requires.txt
+StackAPI.egg-info/top_level.txt
+stackapi/__init__.py
+stackapi/stackapi.py

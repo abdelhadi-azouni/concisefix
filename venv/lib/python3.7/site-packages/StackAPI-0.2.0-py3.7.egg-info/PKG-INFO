@@ -1,0 +1,62 @@
+Metadata-Version: 1.2
+Name: StackAPI
+Version: 0.2.0
+Summary: Library for interacting with the Stack Exchange API
+Home-page: https://github.com/AWegnerGitHub/StackAPI
+Author: Andrew Wegner
+Author-email: pypi@andrewwegner.com
+Maintainer: Andrew Wegner
+Maintainer-email: pypi@andrewwegner.com
+License: MIT
+Description: This is a Python wrappers for the `Stack Exchange
+        API <http://api.stackexchange.com/>`__. This library supports Stack
+        Exchange API v2.2.
+        
+        .. image:: https://readthedocs.org/projects/stackapi/badge/?version=latest
+          :target: http://stackapi.readthedocs.io/en/latest/?badge=latest
+          :alt: Documentation Status
+        
+        This library has support for:
+        
+        -  The Stack Exchange backoff parameter. It will automatically force a
+           delay to match the parameter.
+        -  Read and write functionality via the API.
+        -  Can retrieve multiple pages of results with a single call and merges
+           all the results into a single response.
+        -  Throws exceptions returned by the API for easier troubleshooting.
+        -  Utilizes `Requests <http://docs.python-requests.org/>`__.
+        
+        
+        Example usage:
+        ==============
+        
+        Establish a connection to Stack Overflow and gather some comments
+        -----------------------------------------------------------------
+        
+        ::
+        
+            from stackapi import StackAPI
+            SITE = StackAPI('stackoverflow')
+            comments = SITE.fetch('comments')
+        
+        The above, will issue a call to the
+        |comments|_. end point on Stack Overflow.
+        
+        .. |comments| replace:: ``comments``
+        .. _comments: http://api.stackexchange.com/docs/comments
+        
+        Much more detailed documentation is available on
+        `ReadTheDocs <http://stackapi.readthedocs.io/>`__.
+        
+Keywords: stackexchange
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
