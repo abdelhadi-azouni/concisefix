@@ -12,6 +12,8 @@ Concisefix is a troubleshooting search engine, where you can drop your error log
 
 Read more details here: https://medium.com/p/520e557bdefa/edit
 
+Live demo: https://www.concisefix.co/findfix
+
 If you find this repo useful or cool, please give us a star ⭐️  :D
 
 # Get started
