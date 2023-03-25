@@ -22,11 +22,19 @@ If you find this repo useful or cool, please give us a star ⭐️  :D
 ```
 pip3 install -r requirements
 ```
-3. Start the API
+3. Get and setup env variables:
+```
+OPENAI_API_KEY (from openai)
+GOOGLE_CLIENT_ID (see blog post)
+GOOGLE_CLIENT_SECRET (see blog post)
+REDIRECT_URI (see blog post)
+```
+
+4. Start the API
 ```
 python3 concisefix/app.py
 ```
-4. Start the UI
+5. Start the UI
 ```
 streamlit run concisefix/streamlit_ui.py
 ```
