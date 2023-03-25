@@ -116,9 +116,9 @@ def search_github(question, tag):
 
 
 def search_google_custom(query):
-    params = {
-        "key": "AIzaSyBoe003gU2DVkf0AOSe1hthkksvYqOTfyk",
-        "cx": "227a7cec4600f4427",
+     params = {
+	    "key": "CUSTOM_SEARCH_ENGINE_KEY", #to get, follow the instructions in link above
+        "cx": "CX_VALUE", #to get, follow the instructions in link above
         "q": query,
         "gl": "us",
         "hl": "en"
@@ -131,8 +131,8 @@ def search_google_custom(query):
     if int(search_results.json()["searchInformation"]["totalResults"]) < 3:
         query = compose_search_query(query)
         params = {
-            "key": "AIzaSyBoe003gU2DVkf0AOSe1hthkksvYqOTfyk",
-            "cx": "227a7cec4600f4427",
+            "key": "CUSTOM_SEARCH_ENGINE_KEY", #to get, follow the instructions in the readme file
+            "cx": "CX_VALUE", 
             "q": query,
             "gl": "us",
             "hl": "en"
@@ -170,45 +170,6 @@ def search_google_custom(query):
     return top_results, top_links
 
 
-
-
-
-def search_google_serp(question):
-
-    query = question 
-    
-    params = {
-        "api_key": "83872a6da6494f4c3151cc74c05760a67e9de1551a05ceab42dc2a284ac55832",
-        "device": "desktop",
-        "engine": "google",
-        "q": query,
-        "google_domain": "google.com",
-        "gl": "us",
-        "hl": "en"
-    }
-    search = GoogleSearch(params)
-    results = search.get_dict()
-    top_links = []
-    for i in range(0, 3):
-        try:
-            top_links.append(results["organic_results"][i]["link"])
-        except Exception as e:
-            print("Exception ---->",e)
-    top_results = ""
-    for link in top_links:
-        # print("link ===> ", link)
-        req = Request(
-            url=link, 
-            headers={'User-Agent': 'Mozilla/5.0'}
-        )
-        domain = urlparse(link).netloc
-        # print("domain ===> ", domain)
-        if domain != "stackoverflow.com":
-            try:
-                top_results += text_from_html(urlopen(req).read())
-            except Exception as e:
-                print(e)    
-    return top_results, top_links
 
 
 def compose_search_query(question):
