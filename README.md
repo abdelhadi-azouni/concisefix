@@ -4,7 +4,7 @@ Stackoverflow+Google combo is great for troubleshooting, but has many limitation
 - Cleaning the query might remove key parameters that could impact the quality of search results, in addition to being an annoying manual task
 - You could spend hours reading and trying solutions from Stackoverflow and forums
 
-Concisefix is a troubleshooting search engine, where you can drop your error logs, as is, without cleaning or cut, and get a summary of the most relevant answers on the web. Benefits of Concisefix.co include:
+Concisefix is a troubleshooting search engine, where you can drop your error logs, as is, without cleaning or cut, and get a summary of the most relevant answers on the web. Benefits of Concisefix include:
 - No hallucinations since it is hooked to Google
 - Cites sources
 - Larger query size than Google search
