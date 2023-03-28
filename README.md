@@ -43,7 +43,7 @@ streamlit run concisefix/streamlit_ui.py
 The summarisation function is miltithreaded which may use a large number of tokens if the Google query returns a large content 
 
 # Next steps
-If someone can clean the code using LangChain or LlamaIndex, that would be nice 
+If someone can clean and refactor the code using LangChain or LlamaIndex, that would be nice 
 
 # Support
 Open an issue, a PR or DM on twitter @hadiazouni
