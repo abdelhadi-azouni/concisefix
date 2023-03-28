@@ -14,7 +14,7 @@ Read more details here: https://medium.com/p/520e557bdefa/edit
 
 Live demo: https://www.concisefix.co/findfix
 
-If you find this repo useful or cool, please give us a star ⭐️  :D
+If you find this repo useful or cool, please give it a star ⭐️  :D
 
 # Get started
 1. Clone this repo
